@@ -1,0 +1,55 @@
+---
+id: intro
+sidebar_position: 1
+---
+
+import { renderToString } from 'react-dom/server';
+import CodeBlock from '@theme/CodeBlock';
+
+import Preview from '../src/components/Preview';
+import Basic from '../src/components/Button/Basic';
+import Outline from '../src/components/Button/Outline';
+import Transparent from '../src/components/Button/Transparent';
+
+
+# Button
+
+This document contain ready to use simple native Button component that can be used in any website which include disabled style.
+This component style suit to light and simple project without rich style or rich function.
+
+### Feature
+- ✅ navtive theme dark/light mode
+- ✅ active style 
+- ✅ disabled style
+- ❌ animation 
+- ❌ focus style
+
+
+## Basic
+
+<Preview>
+  <div className="flex gap-5">
+    <Basic />
+    <Basic disabled />
+  </div>
+</Preview>
+
+
+## Outline
+
+<Preview>
+  <div className="flex gap-5">
+    <Outline />
+    <Outline disabled />
+  </div>
+</Preview>
+
+
+## Transparent
+
+<Preview>
+  <div className="flex gap-5">
+    <Transparent />
+    <Transparent disabled />
+  </div>
+</Preview>
