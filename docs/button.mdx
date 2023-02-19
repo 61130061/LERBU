@@ -1,15 +1,11 @@
 ---
-id: intro
-sidebar_position: 1
+sidebar_position: 2 
 ---
 
-import { renderToString } from 'react-dom/server';
-import CodeBlock from '@theme/CodeBlock';
-
 import Preview from '../src/components/Preview';
-import Basic from '../src/components/Button/Basic';
-import Outline from '../src/components/Button/Outline';
-import Transparent from '../src/components/Button/Transparent';
+import * as Basic from '../src/components/Button/Basic';
+import * as Outline from '../src/components/Button/Outline';
+import * as Transparent from '../src/components/Button/Transparent';
 import Color from '../src/components/Button/Color';
 
 
@@ -28,39 +24,36 @@ This component style suit to light and simple project without rich style or rich
 
 ## Basic
 
-<Preview>
-  <div className="flex gap-5">
-    <Basic />
-    <Basic disabled />
-  </div>
-</Preview>
+<Basic.Playground />
 
 
 ## Outline
 
-<Preview>
-  <div className="flex gap-5">
-    <Outline />
-    <Outline disabled />
-  </div>
-</Preview>
+<Outline.Playground />
 
 
 ## Transparent
 
-<Preview>
-  <div className="flex gap-5">
-    <Transparent />
-    <Transparent disabled />
-  </div>
-</Preview>
+<Transparent.Playground />
 
 
 ## Colorful
 
 <Preview>
   <div className="flex gap-5">
-    <Color color />
-    <Color color disabled />
+    <Color color="primary" />
+    <Color color="primary" disabled />
+  </div>
+  <div className="flex gap-5">
+    <Color color="warning" />
+    <Color color="warning" disabled />
+  </div>
+  <div className="flex gap-5">
+    <Color color="danger" />
+    <Color color="danger" disabled />
+  </div>
+  <div className="flex gap-5">
+    <Color color="success" />
+    <Color color="success" disabled />
   </div>
 </Preview>

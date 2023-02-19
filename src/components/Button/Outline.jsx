@@ -1,15 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
+import CodeBlock from '@theme/CodeBlock';
 
-export default function Outline (props) {
+import Preview from '../Preview';
+
+function Outline (props) {
   const base = "border-zinc-500 text-zinc-900 enabled:hover:bg-zinc-600 dark:text-gray-50";
-  const primary = "border-blue-500 text-blue-600 enabled:hover:bg-blue-600 dark:text-blue-500";
+
+  const color = {
+    primary: "border-blue-500 text-blue-600 enabled:hover:bg-blue-600 dark:text-blue-500",
+    warning: "border-yellow-500 text-yellow-500 enabled:hover:bg-yellow-600 dark:text-yellow-500",
+    danger: "border-red-500 text-red-500 enabled:hover:bg-red-600 dark:text-red-500",
+    success: "border-green-500 text-green-500 enabled:hover:bg-green-600 dark:text-green-500",
+  }
 
   return (
     <button 
-      className={["border text-base leading-none font-medium p-3 rounded-lg enabled:hover:cursor-pointer bg-transparent enabled:hover:bg-opacity-30 enabled:active:shadow-inner disabled:opacity-20 disabled:hover:cursor-not-allowed", props.color ? primary : base].join(' ')}
+      className={["border text-base leading-none font-medium p-3 rounded-lg enabled:hover:cursor-pointer bg-transparent enabled:hover:bg-opacity-30 enabled:active:shadow-inner disabled:opacity-20 disabled:hover:cursor-not-allowed", props.color ? color[props.color] : base].join(' ')}
       {...props}
     >
       Button
     </button>
   )
 }
+
+function Playground () {
+  const [code, setCode] = useState(false);
+
+  return (
+    <>
+      <Preview onCode={() => setCode(prev => !prev)}>
+        <div className="flex gap-5">
+          <Outline />
+          <Outline disabled />
+        </div>
+      </Preview>
+      {code &&
+        <CodeBlock language="html">
+{`<button
+  class="border text-base leading-none font-medium p-3 rounded-lg enabled:hover:cursor-pointer bg-transparent enabled:hover:bg-opacity-30 enabled:active:shadow-inner disabled:opacity-20 disabled:hover:cursor-not-allowed border-zinc-500 text-zinc-900 enabled:hover:bg-zinc-600 dark:text-gray-50"
+>
+  Button
+</button>`}
+        </CodeBlock>
+      }
+    </>
+  )
+}
+
+export { Outline, Playground }

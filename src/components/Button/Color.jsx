@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Basic from './Basic';
-import Outline from './Outline';
-import Transparent from './Transparent';
+import { Basic } from './Basic';
+import { Outline } from './Outline';
+import { Transparent } from './Transparent';
 
 export default function Color(props) {
 
