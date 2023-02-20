@@ -3,6 +3,7 @@ sidebar_position: 3
 ---
 
 import * as Basic from '../src/components/Toggle/Basic';
+import * as Material from '../src/components/Toggle/Material';
 
 
 # Toggle Switch
@@ -12,10 +13,20 @@ Switch component using checkbox `input` tag  with animation with different style
 ### Feature
 - ✅ navtive theme dark/light mode
 - ✅ animation 
-- ⚠️ extra CSS required
+- ️✅ no extra CSS required
 - ❌ focus style
 
 
 ## Basic
 
+This design is simple and rich which is similar to IOS switch. 
+The corner of the switch can be easily modified by changing `rounded-full` class in `div` tag.
+This component is desiged with the theme color that work on both `light` and `dark` mode with `dark:` class of tailwind.
+However, if you want to seperate it with `dark:` class, it would work without breaking the component as well.
+
 <Basic.Playground />
+
+
+## Material
+
+<Material.Playground />
