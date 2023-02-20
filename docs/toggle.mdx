@@ -16,6 +16,12 @@ Switch component using checkbox `input` tag  with animation with different style
 - ️✅ no extra CSS required
 - ❌ focus style
 
+:::info
+
+Because this component use `input` and `label` tags, please be careful with `htmlFor` attribute in `label` tag and `id` in `input` tag.
+They should be the same, otherwise you will trigger a wrong switch.
+
+:::
 
 ## Basic
 
@@ -25,7 +31,6 @@ This component is desiged with the theme color that work on both `light` and `da
 However, if you want to seperate it with `dark:` class, it would work without breaking the component as well.
 
 <Basic.Playground />
-
 
 ## Material
 
