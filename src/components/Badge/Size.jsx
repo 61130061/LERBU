@@ -7,7 +7,7 @@ function Size () {
   return (
     <div className="flex flex-col gap-5 items-center">
       <div className="flex items-center gap-2">
-        <span className="bg-zinc-700 rounded-full px-3 text-xs text-white py-1 font-medium">
+        <span className="bg-zinc-700 rounded-full px-2 text-xs text-white py-1 font-medium">
           Default
         </span>
         <span className="inline-flex items-center bg-zinc-700 rounded-full px-1 pr-2 text-xs text-white py-1 font-medium">
@@ -16,7 +16,7 @@ function Size () {
           </svg>
           Default
         </span>
-        <span className="border border-zinc-700 bg-opacity-20 bg-zinc-600 rounded-full px-3 text-xs text-zinc-900 dark:text-white py-1 font-medium">
+        <span className="border border-zinc-700 bg-opacity-20 bg-zinc-600 rounded-full px-2 text-xs text-zinc-900 dark:text-white py-1 font-medium">
           Default
         </span>
         <span className="inline-flex items-center border border-zinc-700 bg-opacity-20 bg-zinc-600 rounded-full px-1 pr-2 text-xs dark:text-white text-zinc-900 py-1 font-medium">
@@ -26,7 +26,7 @@ function Size () {
           Default
         </span>
       </div>
-      <div className="flex gap-2">
+      <div className="flex items-center gap-2">
         <span className="bg-zinc-700 rounded-full px-3 text-sm text-white py-1 font-medium">
           Default
         </span>
