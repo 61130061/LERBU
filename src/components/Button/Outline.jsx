@@ -29,7 +29,7 @@ function Playground () {
   return (
     <>
       <Preview onCode={() => setCode(prev => !prev)}>
-        <div className="flex gap-5">
+        <div className="flex items-center gap-5">
           <Outline />
           <Outline disabled />
         </div>
