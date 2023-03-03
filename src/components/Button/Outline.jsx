@@ -13,9 +13,14 @@ function Outline (props) {
     success: "border-green-500 text-green-500 enabled:hover:bg-green-600 dark:text-green-500",
   }
 
+  const corner = {
+    base: 'rounded-lg px-3',
+    full: 'rounded-full px-4'
+  }
+
   return (
     <button 
-      className={["border text-base leading-none font-medium p-3 rounded-lg enabled:hover:cursor-pointer bg-transparent enabled:hover:bg-opacity-30 enabled:active:shadow-inner disabled:opacity-20 disabled:hover:cursor-not-allowed", props.color ? color[props.color] : base].join(' ')}
+      className={["border text-base leading-none font-medium py-3 enabled:hover:cursor-pointer bg-transparent enabled:hover:bg-opacity-30 enabled:active:shadow-inner disabled:opacity-20 disabled:hover:cursor-not-allowed", props.color ? color[props.color] : base, props.corner ? corner[props.corner] : corner.base].join(' ')}
       {...props}
     >
       Button
@@ -23,7 +28,7 @@ function Outline (props) {
   )
 }
 
-function Playground () {
+function Showoff () {
   const [code, setCode] = useState(false);
 
   return (
@@ -47,4 +52,4 @@ function Playground () {
   )
 }
 
-export { Outline, Playground }
+export { Outline, Showoff }

@@ -13,9 +13,14 @@ function Basic (props) {
     success: "bg-green-600 enabled:hover:bg-green-700",
   }
 
+  const corner = {
+    base: 'rounded-lg px-3',
+    full: 'rounded-full px-4'
+  }
+
   return (
     <button 
-      className={["border-none text-base leading-none font-medium p-3 rounded-lg enabled:hover:cursor-pointer text-gray-100 enabled:active:shadow-inner disabled:opacity-20 disabled:hover:cursor-not-allowed", props.color ? color[props.color] : base].join(' ')}
+      className={["border-none text-base leading-none font-medium py-3 enabled:hover:cursor-pointer text-gray-100 enabled:active:shadow-inner disabled:opacity-20 disabled:hover:cursor-not-allowed", props.color ? color[props.color] : base, props.corner ? corner[props.corner] : corner.base].join(' ')}
       {...props}
     >
       Button
@@ -23,7 +28,7 @@ function Basic (props) {
   )
 }
 
-function Playground () {
+function Showoff () {
   const [code, setCode] = useState(false);
 
   return (
@@ -47,4 +52,4 @@ function Playground () {
   )
 }
 
-export { Basic, Playground }
+export { Basic, Showoff }
