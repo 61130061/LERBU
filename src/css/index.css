@@ -41,6 +41,10 @@ code {
   white-space: pre-wrap !important;
 }
 
-span {
+* {
   border: 0px solid transparent;
+}
+
+input {
+  all: unset;
 }

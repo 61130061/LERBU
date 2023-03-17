@@ -32,7 +32,7 @@ function Material (props) {
   )
 }
 
-function Playground () {
+function Showoff () {
   const [code, setCode] = useState(false);
 
   return (
@@ -86,4 +86,4 @@ function Playground () {
   )
 }
 
-export { Material, Playground }
+export { Material, Showoff }
